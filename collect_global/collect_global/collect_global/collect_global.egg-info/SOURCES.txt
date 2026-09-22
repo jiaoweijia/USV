@@ -1,0 +1,8 @@
+setup.py
+collect_global.egg-info/PKG-INFO
+collect_global.egg-info/SOURCES.txt
+collect_global.egg-info/dependency_links.txt
+collect_global.egg-info/top_level.txt
+define/__init__.py
+define/baseClass.py
+define/setup.py

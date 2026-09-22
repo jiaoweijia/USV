@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b98c61d8-077a-4f7a-9429-b5bda573ef0a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>__init__.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.12</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="common\baseClass.py" />
+    <Compile Include="common\watchThread.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\commonTools.py" />
+    <Compile Include="common\define.py" />
+    <Compile Include="common\file_helper.py" />
+    <Compile Include="common\jsonFunc.py" />
+    <Compile Include="common\logManager.py" />
+    <Compile Include="common\log_helper.py" />
+    <Compile Include="common\__init__.py" />
+    <Compile Include="database\dbManger.py" />
+    <Compile Include="database\databaseBase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\sqlserver.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\mysql.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\sqlite.py" />
+    <Compile Include="database\__init__.py" />
+    <Compile Include="protocol\data_protocol.py" />
+    <Compile Include="protocol\modbusDefine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="protocol\protocol_redis.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="protocol\protocol_socket.py" />
+    <Compile Include="protocol\__init__.py" />
+    <Compile Include="pynet\redisMgr.py" />
+    <Compile Include="pynet\socket_define.py" />
+    <Compile Include="pynet\socket_rw.py" />
+    <Compile Include="pynet\tcp_client.py" />
+    <Compile Include="pynet\tcp_server.py" />
+    <Compile Include="pynet\udp_client.py" />
+    <Compile Include="pynet\udp_server.py" />
+    <Compile Include="pynet\websocket_server.py" />
+    <Compile Include="pynet\__init__.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common" />
+    <Folder Include="database" />
+    <Folder Include="protocol" />
+    <Folder Include="pynet" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.12" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
